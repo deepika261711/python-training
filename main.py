@@ -6,16 +6,15 @@ C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS
 Code, Compile, Run and Debug online from anywhere in world.
 
 '''
-
-x=int(input("Enter a number:"))
-for i in range(1,x+1):
-    if (i%3==0) and (i%5==0):
-        print("fizzbuzz")
-    
-    elif i%3==0:
-         print("fizz")
-    elif i%5==0:
-         print("buzz")
-    
-    else:
-         print(i)
+def check(x):
+    l=0
+    r=len(x)-1
+    while l<r:
+     if x[l]!=x[r]:
+        return "not a palindrome"
+     else:
+                l+=1
+                r-=1
+    return "palindrome"
+x="madam"
+print(check(x))
